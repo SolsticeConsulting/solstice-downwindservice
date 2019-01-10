@@ -1,0 +1,21 @@
+{
+  "name": "hacka-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getDist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http-status-codes": "^1.3.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "winston": "^3.1.0"
+  }
+}
