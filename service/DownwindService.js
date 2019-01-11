@@ -48,8 +48,9 @@ class DownwindService {
                 let origin_point = turf.point(origin_coords);
                 let target_point = turf.point(target_coords);
                 let radius = 2; // two miles out
-                let bearing1 = wind.windBearing - 5;
-                let bearing2 = wind.windBearing + 5;
+                let bearing = wind.windBearing;
+                let bearing1 = bearing - 5;
+                let bearing2 = bearing + 5;
 
                 let sector = turf.sector(origin_point, radius, bearing1, bearing2, {'options.units': 'miles'});
                 let r = turf.booleanContains(sector, target_point);
@@ -58,7 +59,7 @@ class DownwindService {
                     'origin': turf.getCoord(origin_point),
                     'target': turf.getCoord(target_point),
                     'origin_windBearing':
-                    wind.windBearing,
+                    bearing,
                     'origin_windSpeed': wind.windSpeed,
                     'downwind': r,
                     'downwind_polygon': turf.coordAll(sector)
