@@ -1,10 +1,12 @@
 {
-  "name": "hacka-test",
+  "name": "downwindService",
   "version": "1.0.0",
-  "description": "",
-  "main": "getDist.js",
+  "description": "This service, written in nodejs, will query current wind conditions at a user-specified point and return a result indicating if a user-supplied target point is downwind.",
+  "main": "express_service.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node express_service.js",
+    "local": "node local.js"
   },
   "author": "",
   "license": "ISC",

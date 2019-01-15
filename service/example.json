@@ -1,0 +1,22 @@
+{
+  "origin": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-87.624422, 41.897172]
+    },
+    "properties": {
+      "name": "Chicago Water Tower"
+    }
+  },
+  "target": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-87.624861, 41.889707]
+    },
+    "properties": {
+      "name": "Wrigley Building"
+    }
+  }
+}
