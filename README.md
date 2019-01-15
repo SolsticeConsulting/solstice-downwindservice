@@ -11,44 +11,32 @@ cd service
 npm install
 ```
 
+# Payload format
+There is an **example.json** that shows the format of input json.
+It includes
+
+- origin - point where source originates
+- target - point you want to check if downwind
+
+as geojson points
+
 # Command Line Usage
-There is a fix
-
-
-
+For testing, or quick checks, the script can be run from command line like this
+```
+npm run-script local example.json
+```
 
 # API Usage
-To use the api, you have to post json that includes origin and target
-geojson points to the /geojson endpoint, like this
+To use the api, you have to post json as in **example.json** to the /geojson endpoint
+
+To run the express server locally, you can do this:
+
 ```
-{
-    "origin": {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-87.624422, 41.897172]
-        },
-        "properties": {
-            "name": "Chicago Water Tower"
-        }
-    },
-    "target": {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-87.624861, 41.889707]
-        },
-        "properties": {
-            "name": "Wrigley Building"
-        }
-    }
-}
+npm start
 ```
-
-
-
 
 # Docker Server Image
+We have the express server wrapped into a docker image as well
 
 ```
 # build docker image

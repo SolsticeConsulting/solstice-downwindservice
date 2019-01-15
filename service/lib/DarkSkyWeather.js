@@ -1,9 +1,16 @@
-const logger = require('./Logging');
+/**
+ * DarkSkyWeather wrapper class
+ *
+ * Created by jcooley on 1/15/19.
+ */
+
 const HttpError = require('./HttpError');
-const HttpStatus = require('http-status-codes');
 const requestpromise = require('request-promise');
 const DARK_SKY_KEY = process.env.DARK_SKY_KEY;
 
+//
+// Wrap DarkSky API
+//
 class DarkSkyWeather {
 
     static async getWind(lnglatpoint) {
