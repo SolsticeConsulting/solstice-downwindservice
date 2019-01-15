@@ -1,0 +1,7 @@
+# Run docker-compose up
+downwindservice:
+  image: solstice/downwindservice:latest
+  ports:
+    - "8000:8000"
+  environment:
+    - DARK_SKY_KEY=${DARK_SKY_KEY}
